@@ -1,0 +1,32 @@
+<view class="container">
+  <loading hidden="{{loadingHidden}}">加载中...</loading>
+
+  <scroll-view scroll-y="true" style="height: 100%; background-color: #FFF;">
+    <!--<image bindtap="onBannerPicClick" class="banner-image" mode="aspectFill" src="{{bannerPicUrl}}" />-->
+
+    <view class="daily-container">
+      <picker class="weui-btn" bindchange="onSelRecommendTimeChange" range="{{recommendHistoryData}}" hidden="{{!loadingHidden}}">
+        <button class="sel-time-btn">{{currentTime}}</button>
+      </picker>
+    </view>
+
+    <block wx:for="{{recommendData}}" wx:for-item="recommendInfo">
+      <view class="daily-container" bindtap="showToast">
+        <navigator wx:for="{{recommendInfo['list']}}" wx:for-item="recommendItemInfo">
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">{{recommendItemInfo.desc}}</view>
+              <view class="weui-media-box__info">
+                <view wx:if="{{recommendItemInfo.who!=null}}" class="weui-media-box__info__meta">作者：{{recommendItemInfo.who}}</view>
+                <view class="weui-media-box__info__meta">{{recommendItemInfo.source}}</view>
+                <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{recommendItemInfo.type}}</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+
+  </scroll-view>
+
+</view>

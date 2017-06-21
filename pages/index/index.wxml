@@ -1,0 +1,25 @@
+<import src="index-template.wxml" />
+
+<view class="container">
+  <loading hidden="{{loadingHidden}}">加载中...</loading>
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+
+  <swiper style="flex: 1;" bindchange="onBindchange" current="{{curSelClassifyIndex}}">
+    <swiper-item>
+      <template is="gankList" data="{{gankList: gankData['Android']}}" />
+    </swiper-item>
+    <swiper-item>
+      <template is="gankList" data="{{gankList: gankData['iOS']}}" />
+    </swiper-item>
+    <swiper-item>
+      <template is="gankList" data="{{gankList: gankData['App']}}" />
+    </swiper-item>
+  </swiper>
+</view>

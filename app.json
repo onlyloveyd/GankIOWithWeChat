@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/daily/daily",
+    "pages/settings/settings",
+    "pages/girl/girl",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#222831",
+    "navigationBarTitleText": "干货集中营",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/daily/daily",
+        "text": "每日干货",
+        "iconPath": "image/tab_daily_unselect.png",
+        "selectedIconPath": "image/tab_daily_select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "分类阅读",
+        "iconPath": "image/tab_sort_unselect.png",
+        "selectedIconPath": "image/tab_sort_select.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "关于",
+        "iconPath": "image/tab_about_unselect.png",
+        "selectedIconPath": "image/tab_about_select.png"
+      }
+    ],
+    "backgroundColor": "#222831",
+    "color": "#AAffffff",
+    "selectedColor": "#FFFFFF"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}

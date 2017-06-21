@@ -1,0 +1,20 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  height: 300rpx;
+  background-color: #222831;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.header-nickname {
+  color: #FFF;
+  font-size: 30rpx;
+}

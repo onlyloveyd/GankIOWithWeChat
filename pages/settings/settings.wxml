@@ -1,0 +1,9 @@
+<view class="container">
+  <scroll-view scroll-y="true" style="height: 100%;">
+    <view class="header-container">
+      <image class="header-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="header-nickname">{{userInfo.nickName}}</text>
+    </view>
+    
+  </scroll-view>
+</view>
